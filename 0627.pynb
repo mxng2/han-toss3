@@ -1,0 +1,2118 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "13440d53-c5d1-4adf-bea4-56edfb7043b1",
+   "metadata": {},
+   "source": [
+    "## 리스트와 튜플\n",
+    "- 리스트 선언 후, 인덱싱 & 슬라이싱"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "56f546dd-ed3e-428c-817f-38266a8daf7f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[273, 32, 'A', True, [1, 2, 3]]"
+      ]
+     },
+     "execution_count": 2,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list_a = [273, 32, 'A', True, [1, 2, 3]]\n",
+    "list_a"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "482ff7aa-5aa9-48ba-ae7d-75c92a0d1ad8",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "273"
+      ]
+     },
+     "execution_count": 8,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list_a[0] #인덱싱"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "51c94f8d-9a56-48dd-874d-dafbbbbb375c",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[273, 32, 'A', True, [1, 2, 3]]"
+      ]
+     },
+     "execution_count": 6,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list_a[:] #슬라이싱"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "54a59a70-12bf-458c-a9ba-7e6548a2ec23",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "3"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list_a = [273, 32, 'A', True, [1, 2, 3]]\n",
+    "list_a[4][2]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "33a17f46-8905-4d54-aae8-09f30e86fd4b",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "3"
+      ]
+     },
+     "execution_count": 10,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list_a[-1][2] #-1은 가장 끝의 인덱스를 의미함"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "7f2404d2-f4c3-465b-9c6b-6ce8a0a1c45f",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "IndexError",
+     "evalue": "list index out of range",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mIndexError\u001b[0m                                Traceback (most recent call last)",
+      "Cell \u001b[1;32mIn[11], line 2\u001b[0m\n\u001b[0;32m      1\u001b[0m list_a \u001b[38;5;241m=\u001b[39m [\u001b[38;5;241m273\u001b[39m, \u001b[38;5;241m32\u001b[39m, \u001b[38;5;124m'\u001b[39m\u001b[38;5;124mA\u001b[39m\u001b[38;5;124m'\u001b[39m, \u001b[38;5;28;01mTrue\u001b[39;00m, [\u001b[38;5;241m1\u001b[39m, \u001b[38;5;241m2\u001b[39m, \u001b[38;5;241m3\u001b[39m]]\n\u001b[1;32m----> 2\u001b[0m list_a[\u001b[38;5;241m5\u001b[39m]\n",
+      "\u001b[1;31mIndexError\u001b[0m: list index out of range"
+     ]
+    }
+   ],
+   "source": [
+    "list_a = [273, 32, 'A', True, [1, 2, 3]]\n",
+    "list_a[5]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "66f01ea0-73ca-41c1-bcb4-d40d06488c68",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 2, 3, 4, 5, 6]"
+      ]
+     },
+     "execution_count": 12,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# p.196 \n",
+    "list_a = [1, 2, 3]\n",
+    "list_b = [4, 5, 6]\n",
+    "list_a + list_b"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "a6a5c799-0e05-4b3f-bff8-95d58713a8f1",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 2, 3, 1, 2, 3, 1, 2, 3]"
+      ]
+     },
+     "execution_count": 13,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list_a * 3"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "e5a9b753-4969-423a-842b-e5846af24781",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 2, 3, 3, 3]"
+      ]
+     },
+     "execution_count": 15,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list_a.append(3)\n",
+    "list_a"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "d3caaef9-28c0-4aa0-8aa3-a243ce6b60bb",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 2, 3, 3, 3, 4]"
+      ]
+     },
+     "execution_count": 16,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list_a + [4]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "b6e06911-02ab-4a30-b9ed-fcb7f1a1304f",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "TypeError",
+     "evalue": "'int' object is not iterable",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[1;32mIn[17], line 1\u001b[0m\n\u001b[1;32m----> 1\u001b[0m list_a \u001b[38;5;241m+\u001b[39m \u001b[38;5;28mlist\u001b[39m(\u001b[38;5;241m4\u001b[39m)\n",
+      "\u001b[1;31mTypeError\u001b[0m: 'int' object is not iterable"
+     ]
+    }
+   ],
+   "source": [
+    "list_a + list(4)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "50bbc1b6-6570-4cc6-b806-d358b454faf6",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 2, 3, 3, 3, 'a']"
+      ]
+     },
+     "execution_count": 18,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list_a + list('a')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "202b6184-c324-4c15-9653-300f10cc3dba",
+   "metadata": {},
+   "source": [
+    "-숫자는 scalar 자료형\n",
+    "-문자는 sequence 자료형 (List도 sequence 자료형)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "e2338075-1c4a-49a5-862c-6852132f784a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[273, 32, 410, True, [1, 2, 3]]"
+      ]
+     },
+     "execution_count": 20,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list_a = [273, 32, 'A', True, [1, 2, 3]]\n",
+    "#list_a[인덱스 번호] = 새로운 값\n",
+    "list_a[2] = 410\n",
+    "list_a           #.append하면 맨 뒤에 요소가 들어가고, 인덱스 번호 지정하면 원하는 위치에 삽입 가능"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "id": "dfeec116-f245-4a35-a34b-4cdbbb73f466",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "5"
+      ]
+     },
+     "execution_count": 21,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "len(list_a)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c1c361f2-23f7-4eff-903d-d2ff59f1204c",
+   "metadata": {},
+   "source": [
+    "## append()와 insert()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "4c8b7466-6acc-4ac8-b6e5-f67f05fdc5c0",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "list_a = [1, 2, 3]\n",
+    "list_a.append(4)\n",
+    "list_a.append(\"A\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "15b7ad3f-4c26-4820-9cc4-9640c44189b2",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 2, 3, 4, 'A']"
+      ]
+     },
+     "execution_count": 27,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list_a"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "id": "ae89338c-1de6-4d50-9d3c-5cdcf46c34c2",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[100, 1, 2, 3, 4, 'A']"
+      ]
+     },
+     "execution_count": 28,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list_a.insert(0, 100)\n",
+    "list_a"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7f46067b-f46d-4856-87f6-bba224ae80ee",
+   "metadata": {},
+   "source": [
+    "## extend()\n",
+    "- extend() 함수는 매개변수로 리스트를 입력"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "id": "fd48badf-cadc-4926-b181-385947d9d785",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "TypeError",
+     "evalue": "'int' object is not iterable",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[1;32mIn[32], line 2\u001b[0m\n\u001b[0;32m      1\u001b[0m list_a \u001b[38;5;241m=\u001b[39m [\u001b[38;5;241m1\u001b[39m, \u001b[38;5;241m2\u001b[39m, \u001b[38;5;241m3\u001b[39m]\n\u001b[1;32m----> 2\u001b[0m list_a\u001b[38;5;241m.\u001b[39mextend(\u001b[38;5;241m1\u001b[39m)\n",
+      "\u001b[1;31mTypeError\u001b[0m: 'int' object is not iterable"
+     ]
+    }
+   ],
+   "source": [
+    "list_a = [1, 2, 3]\n",
+    "list_a.extend(1)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "id": "9fe769db-789b-4c0f-8747-3c74fe7a7007",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 2, 3, 4, 5, 6]"
+      ]
+     },
+     "execution_count": 34,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list_a = [1, 2, 3]\n",
+    "list_a.extend([4,5,6])\n",
+    "list_a"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2ab3a0b3-38fc-4b78-996d-5e013cf0c219",
+   "metadata": {},
+   "source": [
+    "## 인덱스로 제거하기: del 키워드, pop()키워드"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "id": "43b334a0-c1e3-45f7-9d01-2873f2be324f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['b', 'c', 'd']"
+      ]
+     },
+     "execution_count": 35,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list_a = [\"a\", \"b\", \"c\", \"d\"]\n",
+    "del list_a[0]\n",
+    "list_a\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 39,
+   "id": "9d9050bc-c64e-4398-beda-df3d3a76a6fe",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['a', 'b', 'c']"
+      ]
+     },
+     "execution_count": 39,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list_a = [\"a\", \"b\", \"c\", \"d\"]\n",
+    "list_a.pop(3)\n",
+    "list_a"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 42,
+   "id": "c86b39c3-64f2-4f14-b74e-28da832cb66a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['c', 'd']"
+      ]
+     },
+     "execution_count": 42,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#슬라이싱을 이용한 리스트 요소 제거\n",
+    "list_a = [\"a\", \"b\", \"c\", \"d\"]\n",
+    "del list_a[0:2]\n",
+    "list_a"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "95d2ca9a-914f-4c84-b548-670817e2b8b5",
+   "metadata": {},
+   "source": [
+    "## 값으로 제거하기: remove()\n",
+    "- 인덱스 번호가 아닌 실제 값을 의미한다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 49,
+   "id": "25efc9e3-b62e-4aae-bc97-7b1507c3eed0",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['b', 'c', 'd']"
+      ]
+     },
+     "execution_count": 49,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list_a = [\"a\", \"b\", \"c\", \"d\"]\n",
+    "list_a.remove(\"a\")\n",
+    "list_a"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 52,
+   "id": "4cdb970a-3640-4bdf-8f67-0eb6b92c2f10",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['a', 'b', 'c', 'd']"
+      ]
+     },
+     "execution_count": 52,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list_a = [\"a\", \"a\", \"b\", \"c\", \"d\"]\n",
+    "list_a.remove(\"a\")\n",
+    "list_a   #remove는 첫 요소 부터 순서대로 ( )안에 값을 찾아서 삭제한다."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 53,
+   "id": "d96659ba-e5f7-4146-a3c7-4bb585273461",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['b', 'c', 'd']"
+      ]
+     },
+     "execution_count": 53,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list_a = [\"a\", \"a\", \"b\", \"c\", \"d\"]\n",
+    "list_a.remove(\"a\")\n",
+    "list_a.remove(\"a\")\n",
+    "list_a   #remove는 첫 요소 부터 순서대로 ( )안에 값을 찾아서 삭제한다."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7704dad7-0863-42e6-8859-56aa6d51c0c8",
+   "metadata": {},
+   "source": [
+    "## 모두제거하기"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 54,
+   "id": "c5554926-a996-43af-9213-6421e742950e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[]"
+      ]
+     },
+     "execution_count": 54,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list_a = [\"a\", \"a\", \"b\", \"c\", \"d\"]\n",
+    "list_a.clear()\n",
+    "list_a"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e3b6007f-ee84-4f90-8632-099082e29750",
+   "metadata": {},
+   "source": [
+    "## 리스트 정렬하기 : sort()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 58,
+   "id": "f84905f1-9e20-4af6-b010-81f50cc97357",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[32, 52, 103, 273]"
+      ]
+     },
+     "execution_count": 58,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list_a = [52, 273, 103, 32]\n",
+    "list_a.sort()\n",
+    "list_a   # 오름차순 정리"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 59,
+   "id": "1458a4fe-9486-4130-80ad-47db2c8edacd",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[273, 103, 52, 32]"
+      ]
+     },
+     "execution_count": 59,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list_a = [52, 273, 103, 32]\n",
+    "list_a.sort(reverse=True)\n",
+    "list_a # 내림차순 정리"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b321ff88-cb46-4902-97aa-ca3116f48340",
+   "metadata": {},
+   "source": [
+    "## 리스트 내부에 있는지 확인하기: in/not in 연산자"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 60,
+   "id": "7d6f6a48-6994-4bd6-b1b5-4b2b8066fea2",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 60,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "273 in [52, 273, 103, 32]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 61,
+   "id": "4db9f940-26e8-482f-a836-08b24b2b8110",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "False"
+      ]
+     },
+     "execution_count": 61,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "273 not in [52, 273, 103, 32]"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0819950b-bebe-4d13-924b-959a964a90c0",
+   "metadata": {},
+   "source": [
+    "## 튜플 (p.317)\n",
+    "- 리스트와 비슷한 자료형"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 65,
+   "id": "62c014ba-7669-4b3f-aa87-d73212fcc655",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(10, 20, 30, 40, 50, 60)"
+      ]
+     },
+     "execution_count": 65,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "tuple_test = (10, 20, 30, 40, 50, 60)\n",
+    "tuple_test"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 67,
+   "id": "be1ebc33-9869-417a-be84-c3bd1248926b",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "10"
+      ]
+     },
+     "execution_count": 67,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "tuple_test[0]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 68,
+   "id": "e8fc80a4-b5b6-4278-992b-5b38cea65638",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "20"
+      ]
+     },
+     "execution_count": 68,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "tuple_test[1]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 70,
+   "id": "3ae96da4-c991-4ba2-a895-89959946d98d",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "30"
+      ]
+     },
+     "execution_count": 70,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "tuple_test[2]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 73,
+   "id": "baf97e17-2a48-40e7-b081-6f58025ee432",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "TypeError",
+     "evalue": "'tuple' object does not support item assignment",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[1;32mIn[73], line 1\u001b[0m\n\u001b[1;32m----> 1\u001b[0m tuple_test[\u001b[38;5;241m0\u001b[39m] \u001b[38;5;241m=\u001b[39m \u001b[38;5;241m100\u001b[39m\n",
+      "\u001b[1;31mTypeError\u001b[0m: 'tuple' object does not support item assignment"
+     ]
+    }
+   ],
+   "source": [
+    "tuple_test[0] = 100 #튜플은 외부 요소의 할당 불가능 -> 리스트와의 차이점"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 74,
+   "id": "c3c89d5b-16ba-4a4d-a017-24723aeb0920",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[103, 52, 32]"
+      ]
+     },
+     "execution_count": 74,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "del list_a[0]\n",
+    "list_a"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 76,
+   "id": "99d9a7c2-d2cf-470e-958c-176033110892",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "TypeError",
+     "evalue": "'tuple' object doesn't support item deletion",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[1;32mIn[76], line 1\u001b[0m\n\u001b[1;32m----> 1\u001b[0m \u001b[38;5;28;01mdel\u001b[39;00m tuple_test[\u001b[38;5;241m0\u001b[39m]\n",
+      "\u001b[1;31mTypeError\u001b[0m: 'tuple' object doesn't support item deletion"
+     ]
+    }
+   ],
+   "source": [
+    "del tuple_test[0]  #튜플은 요소의 삭제도 불가능하다 -> 리스트와의 차이점"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "770fc169-cb36-485c-8c7c-00db63d0caab",
+   "metadata": {},
+   "source": [
+    "## 딕셔너리\n",
+    "- WEB관련 자료형 중에서 JSON 형태와 유사\n",
+    "- pandas 데이터프레임을 만들 때도 매우 자주 사용\n",
+    "- 사전식 구성을 연상하면 됨.\n",
+    "  -> 키워드를 입력하면 다양한 의미들이 나옴\n",
+    "  -> ex) Love, 동사, 명사 등등등"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 83,
+   "id": "022c298a-9b95-4aa2-af33-ebb4d57effa6",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'name': '어벤져스', 'order': '1', 'rank': '3.5', 'director': ['안소니 루소', '조 루소']}"
+      ]
+     },
+     "execution_count": 83,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dic_a = {\n",
+    "    \"name\" : \"어벤져스\",\n",
+    "    \"order\" : \"1\",\n",
+    "    \"rank\" : \"3.5\",\n",
+    "    \"director\" : [\"안소니 루소\", \"조 루소\"]\n",
+    "}\n",
+    "dic_a"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 90,
+   "id": "47be430a-1137-4999-86d9-47475ff4c119",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'안소니'"
+      ]
+     },
+     "execution_count": 90,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# 딕셔너리에서 리스트로 문자열로 자료형이 막 바뀌더라! -> Check Point\n",
+    "dic_a['director'][0][0:3]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 91,
+   "id": "e6bbbd94-a50e-4bf3-b6b2-9ca73f36720f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'name': '어벤져스',\n",
+       " 'order': '1',\n",
+       " 'rank': '3.5',\n",
+       " 'director': ['안소니 루소', '조 루소', 'a', 'a', 'a']}"
+      ]
+     },
+     "execution_count": 91,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dic_a['director'].append(\"a\")\n",
+    "dic_a"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 92,
+   "id": "fe7c3ab6-a984-43c9-a1a1-1fae0e8cfcf8",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'name': '어벤져스',\n",
+       " 'order': '1',\n",
+       " 'rank': '3.5',\n",
+       " 'director': ['안소니 루소', '조 루소', 'a', 'a']}"
+      ]
+     },
+     "execution_count": 92,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dic_a['director'].remove(\"a\")\n",
+    "dic_a"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 94,
+   "id": "111f5e5c-27cf-4078-b6a5-6c9cea6b3f4c",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'name': '7D 건조 망고'}"
+      ]
+     },
+     "execution_count": 94,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dic_key = {\n",
+    "    'name' : '7D 건조 망고'\n",
+    "}\n",
+    "dic_key"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 110,
+   "id": "094eae60-1fe7-4c5c-8919-1cda0802d6b9",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'name': '7D 건조 망고',\n",
+       " '새로키': '새로운 값',\n",
+       " 'price': [1, 2, 3, 4, 5],\n",
+       " '새로운키': '새로운값',\n",
+       " '새로운딕셔너리': {'a': 1, 'b': [1, 2, 3]}}"
+      ]
+     },
+     "execution_count": 110,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dic_key['새로운키'] = \"새로운값\"\n",
+    "dic_key['price'] = [1, 2, 3, 4, 5]\n",
+    "dic_key['새로운딕셔너리'] = {'a': 1, 'b':[1, 2, 3]}\n",
+    "dic_key"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 111,
+   "id": "2b00d50f-c54c-407b-b8ee-3a9fcef49b86",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'name': '7D 건조 망고', '새로키': '새로운 값', 'price': [1, 2, 3, 4, 5], '새로운키': '새로운값'}"
+      ]
+     },
+     "execution_count": 111,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "del dic_key['새로운딕셔너리']\n",
+    "dic_key"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 112,
+   "id": "b0970886-df04-429d-b74c-781243a366eb",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "dict_keys(['name', '새로키', 'price', '새로운키'])"
+      ]
+     },
+     "execution_count": 112,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dic_key.keys()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 113,
+   "id": "75a03891-dd63-477f-8558-f00ac7e09c82",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "dict_values(['7D 건조 망고', '새로운 값', [1, 2, 3, 4, 5], '새로운값'])"
+      ]
+     },
+     "execution_count": 113,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dic_key.values()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 114,
+   "id": "9af78ebe-ad79-463c-8f4f-18513b6e48e3",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "dict_items([('name', '7D 건조 망고'), ('새로키', '새로운 값'), ('price', [1, 2, 3, 4, 5]), ('새로운키', '새로운값')])"
+      ]
+     },
+     "execution_count": 114,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "dic_key.items()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 116,
+   "id": "5f6040ba-8e7f-4a05-936e-2a8c0eecb9a5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "list(dic_key).append('가격')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 119,
+   "id": "b54a4240-fc26-42a8-a45f-93ad092d2c7e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "dic_key = list(dic_key)\n",
+    "dic_key.append('가격')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b936bf27-b780-4211-8adb-026064e22f8d",
+   "metadata": {},
+   "source": [
+    "## 조건문\n",
+    "ex)조건문의 예시\n",
+    "- ~조건을 만족한다 -> True\n",
+    "   + 그러면, 우리가 옷을 사야지!!\n",
+    "- ~조건을 만족하지 못함 -> False\n",
+    "   + 남의 옷을 얻어 입어야지\n",
+    "- if-else"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 120,
+   "id": "23c96263-5bce-4166-b13e-374dbb559330",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1보다 작음\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = 1\n",
+    "if a > 1:\n",
+    "    print(\"1보다 큼\") #<--해당되는 조건식을 만드는 것이 핵심이다.\n",
+    "else:\n",
+    "    print(\"1보다 작음\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 124,
+   "id": "db21869e-effd-4717-9f9d-497c9e066497",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "정답입니다\n"
+     ]
+    }
+   ],
+   "source": [
+    "a = \"okay\"\n",
+    "if a == \"okay\":\n",
+    "    print(\"정답입니다\")\n",
+    "else:\n",
+    "    print(\"오답입니다\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 125,
+   "id": "c2a32d12-f897-4ef6-965e-1250ca32f409",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "if False:\n",
+    "    print(\"True 입니다!\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 127,
+   "id": "51313908-abd9-41d6-bdab-a03573b0207f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "정수 입력해주세요!!! 0\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0이다\n"
+     ]
+    }
+   ],
+   "source": [
+    "number = input(\"정수 입력해주세요!!!\")\n",
+    "number = int(number)\n",
+    "\n",
+    "#위의 코드를 가지고 양수 조건식 만들어보기\n",
+    "if number > 0:\n",
+    "    print(\"양수\")\n",
+    "\n",
+    "#음수 조건\n",
+    "if number < 0:\n",
+    "    print(\"음수\")\n",
+    "\n",
+    "#0 조건\n",
+    "if number == 0:\n",
+    "    print(\"0이다\")\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5cb85ff6-b27b-479d-b434-de55528625a0",
+   "metadata": {},
+   "source": [
+    "시나리오 \n",
+    "- 여러분의 돈이 0000있음\n",
+    "- 파이브가이즈 햄버거 세트 가격이 35000이라고 함\n",
+    "- 햄버거 먹을 수 있는 상황과 그렇지 못한 상황에 대해서 프로그래밍 하세요!!"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 130,
+   "id": "9d1c869a-7de5-4c4f-be98-6f2098b5e1da",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "돈 입력 10000\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "햄버거 주문 불가능\n"
+     ]
+    }
+   ],
+   "source": [
+    "money = int(input(\"돈 입력\"))\n",
+    "if money > 35000:\n",
+    "    print(\"햄버거 주문 가능\")\n",
+    "else:\n",
+    "    print(\"햄버거 주문 불가능\")\n",
+    "\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0783367d-2d31-4933-9cf4-ee62894ace44",
+   "metadata": {},
+   "source": [
+    "## 날짜/시간 활용하기\n",
+    "-datetime (파이썬 기본 라이브러리)\n",
+    "\n",
+    "-pandas to_datetime:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 131,
+   "id": "374a4aca-9678-484c-b99a-b20fdc787e3a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "datetime.datetime(2024, 6, 27, 14, 38, 52, 255097)"
+      ]
+     },
+     "execution_count": 131,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "import datetime\n",
+    "\n",
+    "# 현재 날짜/시간 구하기\n",
+    "now = datetime.datetime.now()\n",
+    "now"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 132,
+   "id": "915bd060-02cf-4a7c-974f-0429cfa64155",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "2024"
+      ]
+     },
+     "execution_count": 132,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "now.year #연도만 추출"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 133,
+   "id": "7256a9d0-dd6e-478a-83bc-625d2a39f054",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "6"
+      ]
+     },
+     "execution_count": 133,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "now.month"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 134,
+   "id": "c33ff720-1863-4f5b-a7a3-6d51e4a2a52e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "27"
+      ]
+     },
+     "execution_count": 134,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "now.day"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 135,
+   "id": "cda3adbb-ed58-4a43-a045-2cd9347e83ef",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "14"
+      ]
+     },
+     "execution_count": 135,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "now.hour"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 136,
+   "id": "21fad41c-94cd-4ff1-82e3-6844eaa1058e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "datetime.datetime(1, 1, 1, 0, 0)"
+      ]
+     },
+     "execution_count": 136,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "now.min"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 137,
+   "id": "36929d51-efea-4930-b56f-983097c047e0",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "38"
+      ]
+     },
+     "execution_count": 137,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "now.minute"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 138,
+   "id": "101854aa-a075-4a3a-9523-a6efe3ef4e85",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "6 월\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(now.month, \"월\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 140,
+   "id": "718ee592-f800-480e-b2bb-df933a4b1d00",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2024년 6월 27일\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(f\"{now.year}년 {now.month}월 {now.day}일\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ac97d6b4-eab8-4856-8bee-08bb953ed6c8",
+   "metadata": {},
+   "source": [
+    "## if - else와 elif 구문"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 143,
+   "id": "f8c1b494-0d64-4dee-aadf-81eced8e0d90",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'int'> 6\n",
+      "여름\n"
+     ]
+    }
+   ],
+   "source": [
+    " import datetime\n",
+    "\n",
+    "#현재 날짜와 시간 구하기\n",
+    "#월 추출해서 현재 계절 확인\n",
+    "now = datetime.datetime.now()\n",
+    "month = now.month\n",
+    "\n",
+    "print(type(month),month)\n",
+    "\n",
+    "if 3 <= month <= 5:\n",
+    "    print('봄')\n",
+    "elif 6 <= month <=8:\n",
+    "    print(\"여름\")\n",
+    "else:\n",
+    "    print(\"모름\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 145,
+   "id": "eb704289-5694-4194-bcb2-ac1dcb02a067",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "숫자를 입력하세요: 0\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "완료\n"
+     ]
+    }
+   ],
+   "source": [
+    "#pass 키워드\n",
+    "num = int(input(\"숫자를 입력하세요:\"))\n",
+    "\n",
+    "if num > 0:\n",
+    "    pass\n",
+    "else:\n",
+    "    pass\n",
+    "print(\"완료\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 148,
+   "id": "14d947a1-5a54-432a-b983-7bef6ba34460",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "1~5 까지 숫자 입력 :  6\n"
+     ]
+    },
+    {
+     "ename": "RuntimeError",
+     "evalue": "No active exception to reraise",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mRuntimeError\u001b[0m                              Traceback (most recent call last)",
+      "Cell \u001b[1;32mIn[148], line 5\u001b[0m\n\u001b[0;32m      3\u001b[0m \u001b[38;5;66;03m# 범위를 벗어나면 error 발생!\u001b[39;00m\n\u001b[0;32m      4\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m a \u001b[38;5;241m<\u001b[39m \u001b[38;5;241m1\u001b[39m \u001b[38;5;129;01mor\u001b[39;00m a \u001b[38;5;241m>\u001b[39m \u001b[38;5;241m5\u001b[39m:\n\u001b[1;32m----> 5\u001b[0m     \u001b[38;5;28;01mraise\u001b[39;00m\n\u001b[0;32m      7\u001b[0m \u001b[38;5;66;03m# 범위 안에 있으면 정상 출력\u001b[39;00m\n\u001b[0;32m      8\u001b[0m \u001b[38;5;28mprint\u001b[39m(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124m입력한 a : \u001b[39m\u001b[38;5;132;01m{\u001b[39;00ma\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m 입니다.\u001b[39m\u001b[38;5;124m\"\u001b[39m)\n",
+      "\u001b[1;31mRuntimeError\u001b[0m: No active exception to reraise"
+     ]
+    }
+   ],
+   "source": [
+    "a = int(input(\"1~5 까지 숫자 입력 : \"))\n",
+    "\n",
+    "# 범위를 벗어나면 error 발생!\n",
+    "if a < 1 or a > 5:\n",
+    "    raise\n",
+    "\n",
+    "# 범위 안에 있으면 정상 출력\n",
+    "print(f\"입력한 a : {a} 입니다.\")\n",
+    "#오류를 발생시켜 의도하지 않은 코드의 실행을 막기 위해 raise를 사용함."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "06935940-cd79-43e5-b7ef-2458b5103ff5",
+   "metadata": {},
+   "source": [
+    "## for 반복문\n",
+    "- 몇 번을 반복해야 하는지 사용자가 지정"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 150,
+   "id": "1f823104-b9b3-448f-a72c-600aeab2d976",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "출력\n",
+      "출력\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"출력\")\n",
+    "print(\"출력\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 152,
+   "id": "849bdc0c-a5f8-46c8-8a12-53f7abd99ff7",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "출력\n",
+      "출력\n"
+     ]
+    }
+   ],
+   "source": [
+    "for i in range(3): #반복문 tip:처음에 범위 지정할 때, 3번 정도 확인 후 -> 확장\n",
+    "    print(\"출력\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "95502ff7-c087-425c-96ec-b8c57393d219",
+   "metadata": {},
+   "source": [
+    "## while 반복문\n",
+    "- 조건식이 참이면 계속 수행함\n",
+    "- ex) 게임(자동사냥)\n",
+    "  + 자동사냥 버튼 ==> True"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 156,
+   "id": "9a92d706-a0a4-4a6b-80eb-b34bf857f964",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "273\n",
+      "32\n",
+      "103\n",
+      "57\n",
+      "52\n"
+     ]
+    }
+   ],
+   "source": [
+    "array = [273, 32, 103, 57, 52]\n",
+    "\n",
+    "for element in array:\n",
+    "    print(element)      #위와 다르게 범위를 준 적이 없지만, 5번이 돌아갔다 why? -> array안에 원소의 개수만큼 돌아가게 됨."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 157,
+   "id": "418717dc-2f7f-4f5a-9c51-f45cada55aa8",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "a\n",
+      "b\n",
+      "c\n"
+     ]
+    }
+   ],
+   "source": [
+    "text = \"abc\"\n",
+    "\n",
+    "for element in text:\n",
+    "    print(element)      #위와 다르게 범위를 준 적이 없지만, 5번이 돌아갔다 why? -> array안에 원소의 개수만큼 돌아가게 됨."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 158,
+   "id": "6d3cf779-72eb-4e99-ba4d-979792b4d918",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "2\n",
+      "3\n"
+     ]
+    }
+   ],
+   "source": [
+    "num = \"123\"\n",
+    "\n",
+    "for element in num:\n",
+    "    print(element)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 159,
+   "id": "7f41afd0-cc00-4fbf-a91c-75ba83b23e69",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "(1, 2, 3)\n",
+      "(1, 2, 3)\n",
+      "(1, 2, 3)\n"
+     ]
+    }
+   ],
+   "source": [
+    "num = (1, 2, 3)\n",
+    "for i in num:\n",
+    "    print(num)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "cdfa54ee-405d-4f13-b568-4904e90af9d0",
+   "metadata": {},
+   "source": [
+    "## 문제 \n",
+    "- 반복문을 쓰고 싶음. 근데 iterable 가능하다고 함.\n",
+    "- 문제: 자료형이 iterable인지 아닌지 알고 싶음. 그래서 iterable이면 반복문 수행 하도록 if조건문 만들기"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 166,
+   "id": "c4326cd6-558e-4927-87cf-62c55b3451b5",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 2, 3]\n",
+      "1\n",
+      "2\n",
+      "3\n",
+      "[4, 5, 6, 7]\n",
+      "4\n",
+      "5\n",
+      "6\n",
+      "7\n",
+      "[8, 9]\n",
+      "8\n",
+      "9\n"
+     ]
+    }
+   ],
+   "source": [
+    "list_of_list = [[1, 2, 3], [4, 5, 6, 7], [8, 9]]\n",
+    "list_of_list     #이중 for문\n",
+    "\n",
+    "for items in list_of_list:\n",
+    "    print(items)\n",
+    "    for item in items:\n",
+    "        print(item)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 196,
+   "id": "af7b46a9-0511-4115-80c0-46638a754800",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1단\n",
+      "1 1\n",
+      "1 2\n",
+      "1 3\n",
+      "1 4\n",
+      "1 5\n",
+      "1 6\n",
+      "1 7\n",
+      "1 8\n",
+      "1 9\n",
+      "2단\n",
+      "2 1\n",
+      "2 2\n",
+      "2 3\n",
+      "2 4\n",
+      "2 5\n",
+      "2 6\n",
+      "2 7\n",
+      "2 8\n",
+      "2 9\n",
+      "3단\n",
+      "3 1\n",
+      "3 2\n",
+      "3 3\n",
+      "3 4\n",
+      "3 5\n",
+      "3 6\n",
+      "3 7\n",
+      "3 8\n",
+      "3 9\n",
+      "4단\n",
+      "4 1\n",
+      "4 2\n",
+      "4 3\n",
+      "4 4\n",
+      "4 5\n",
+      "4 6\n",
+      "4 7\n",
+      "4 8\n",
+      "4 9\n",
+      "5단\n",
+      "5 1\n",
+      "5 2\n",
+      "5 3\n",
+      "5 4\n",
+      "5 5\n",
+      "5 6\n",
+      "5 7\n",
+      "5 8\n",
+      "5 9\n",
+      "6단\n",
+      "6 1\n",
+      "6 2\n",
+      "6 3\n",
+      "6 4\n",
+      "6 5\n",
+      "6 6\n",
+      "6 7\n",
+      "6 8\n",
+      "6 9\n",
+      "7단\n",
+      "7 1\n",
+      "7 2\n",
+      "7 3\n",
+      "7 4\n",
+      "7 5\n",
+      "7 6\n",
+      "7 7\n",
+      "7 8\n",
+      "7 9\n",
+      "8단\n",
+      "8 1\n",
+      "8 2\n",
+      "8 3\n",
+      "8 4\n",
+      "8 5\n",
+      "8 6\n",
+      "8 7\n",
+      "8 8\n",
+      "8 9\n",
+      "9단\n",
+      "9 1\n",
+      "9 2\n",
+      "9 3\n",
+      "9 4\n",
+      "9 5\n",
+      "9 6\n",
+      "9 7\n",
+      "9 8\n",
+      "9 9\n"
+     ]
+    }
+   ],
+   "source": [
+    "num1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]\n",
+    "num2 = [1, 2, 3, 4, 5, 6, 7, 8, 9]\n",
+    "\n",
+    "for a in num1:\n",
+    "    print(f\"{a}단\")\n",
+    "    for b in num2:\n",
+    "        print(a, b)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6a3ce9c9-93df-493d-961f-6f6963188180",
+   "metadata": {},
+   "source": [
+    "## 리스트 컴프리헨션\n",
+    "- pythonic한 코드\n",
+    "- 반복문을 한 줄로 처리\n",
+    "- 결과값은 리스트로 반환"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 199,
+   "id": "b62e640b-64b2-4361-a717-8b98eedc5b2b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "3\n",
+      "6\n",
+      "9\n",
+      "12\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "[3, 6, 9, 12]"
+      ]
+     },
+     "execution_count": 199,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a = [1, 2, 3, 4]\n",
+    "result = []\n",
+    "for num in a:\n",
+    "    print(num * 3) # 중간에 print를 해서 꼭 확인 해주기\n",
+    "    result.append(num * 3)\n",
+    "\n",
+    "result"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 200,
+   "id": "1424f505-f936-4cda-a539-c0761902ea10",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[3, 6, 9, 12]"
+      ]
+     },
+     "execution_count": 200,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "b = [1, 2, 3, 4]\n",
+    "result2 = [num * 3 for num in b]\n",
+    "result2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 201,
+   "id": "e9aadf86-bf5a-4d38-9472-ad9ee663b72a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1 10\n",
+      "2 20\n",
+      "3 30\n",
+      "4 40\n"
+     ]
+    }
+   ],
+   "source": [
+    "num1 = [1, 2, 3, 4]\n",
+    "num2 = [10, 20, 30 ,40]\n",
+    "result=[]\n",
+    "for n1, n2 in zip(num1, num2):\n",
+    "    print(n1, n2, n1 * n2)\n",
+    "    result.append(n1 * n2)\n",
+    "result"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 211,
+   "id": "de6789cf-961a-435a-ab78-44e915156c92",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[10, 40, 90, 160]"
+      ]
+     },
+     "execution_count": 211,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "result3 = [n1 * n2 for n1, n2 in zip(num1, num2)] # 수식 for 변수 in 출력문\n",
+    "result3"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 212,
+   "id": "e1059942-4871-447a-991d-520e578ed497",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[10, 40, 90, 160]"
+      ]
+     },
+     "execution_count": 212,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "num1 = [1, 2, 3, 4]\n",
+    "num2 = [10, 20, 30, 40]\n",
+    "\n",
+    "result2 = [n1 * n2 for n1, n2 in zip(num1,num2)]\n",
+    "result2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a332e640-e4e5-44fa-936a-da4474cc36e8",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a50cc939-8d4b-4ebb-8f7b-2e8fd5c1d15c",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.11.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
